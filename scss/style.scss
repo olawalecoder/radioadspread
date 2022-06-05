@@ -1,13 +1,14 @@
-$primary: #fba822;
+$primary: #004643;
 $primary-overlay: rgba(251, 168, 34, 0.8);
 $dark-overlay: rgba(8, 8, 8, 0.9);
 
 body {
-  margin-top: 105px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-  background: #333;
+  background: $primary;
   color: #fff;
 }
 
