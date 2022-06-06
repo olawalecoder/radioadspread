@@ -11,3 +11,6 @@ body {
 
 footer p {
   font-size: 0.6rem; }
+
+.background-overlay {
+  background-image: url(../img/grunge-bg.png); }
