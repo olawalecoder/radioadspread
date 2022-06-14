@@ -38,3 +38,12 @@ footer p {
 
 .testimonial-list li {
   margin-bottom: 20px; }
+
+.card .card-text {
+  font-size: 0.7rem; }
+.card label {
+  margin-left: 10px; }
+.card i {
+  position: absolute;
+  top: 25px;
+  right: 30px; }
