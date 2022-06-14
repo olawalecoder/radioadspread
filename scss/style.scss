@@ -23,3 +23,45 @@ footer p {
 .background-overlay {
   background-image: url(../img/grunge-bg.png)
 }
+
+// Testimonial styling
+
+@media only screen and (max-width:768px) {
+
+  .container {
+    margin-top: 66px;
+  }
+
+}
+
+.height {
+  height: 100vh;
+}
+
+.card-testimonial {
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgba(51, 51, 51, .1)
+}
+
+.card:hover {
+  background-color: #eee;
+
+}
+
+.ratings i {
+  color: orange;
+}
+
+.testimonial-list {
+  list-style: none;
+  text-decoration: none;
+}
+
+.testimonial-list li {
+  margin-bottom: 20px;
+}
+
+// .testimonials-margin {
+//   margin-top: -19px;
+// }
