@@ -13,7 +13,7 @@
   <title>RadioAdSpread</title>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/yourfavicon16x16.png" />
-  
+
   <!-- Lottie -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -46,11 +46,13 @@
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item px-3">
-            <a class="nav-link text-secondary" href="login1.html">Log In</a>
+            <a class="nav-link text-secondary"
+            role="button"  data-bs-toggle="modal" data-bs-target="#loginForm">Log
+              In</a>
           </li>
-          <i class="fas fa-eye-slash" id="togglePassword"></i>
           <li class="nav-item px-3">
-            <button class="btn btn-outline-secondary"><a href="signup1.html" class="text-white text-decoration-none">Sign Up</a>
+            <button class="btn btn-outline-secondary"><a
+                class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#signUpForm">Sign Up</a>
             </button>
           </li>
         </ul>
@@ -58,6 +60,80 @@
     </div>
   </nav>
 
+  <!-- Login Modal -->
+  <div class="modal fade text-center text-primary" id="loginForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="loginFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="m-auto rounded-3">
+                <div class="px-6">
+                  <h5 class="" id="loginFormLabel">Welcome Back!</h5>
+                  <p class="">Log in to your dashboard</p>
+                  <form action="" class="row g-4 m-auto input-group-lg">
+                    <div class="form-floating">
+                      <input type="text" required class="form-control rounded-1" id="inputUsername"
+                        placeholder="Username" />
+                      <label for="inputUsername">Username</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" required class="form-control rounded-1" id="inputPassword"
+                        placeholder="Password" />
+                      <label for="inputPassword">Password</label>
+                      <i class="fas fa-eye-slash" id="togglePassword"></i>
+                    </div>
+      
+                    <div class="d-flex justify-content-between mt-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                        <label class="form-check-label text-muted m-0" for="defaultCheck1">
+                          Remember Me
+                        </label>
+                      </div>
+                      <a href="#" class="text-secondary text-decoration-none">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-secondary text-white rounded-1 mt-5">
+                      Log in
+                    </button>
+                    <p>
+                      Don't have an account?
+                      <a class="text-secondary text-decoration-none" 
+                      role="button"
+                      data-bs-target="#signUpForm" data-bs-toggle="modal" data-bs-dismiss="modal">Click here</a>
+                      to Sign up
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade text-center text-primary" id="signUpForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="signUpFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signUpFormLabel">Modal 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Hide this modal and show the first with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#loginForm" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--Hero Section -->
   <section class="py-5" id="hero">
@@ -86,7 +162,8 @@
       <div class="row mt-7">
         <div class="d-flex align-items-center justify-content-center">
           <div class="col-lg-6 d-flex justify-content-start">
-            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_4ejZJA.json"  background="transparent"  speed="0.5"  style="width: 500px; height: 500px;"  loop autoplay></lottie-player>
+            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_4ejZJA.json" background="transparent"
+              speed="0.5" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
           </div>
           <div class="col-lg-4 d-flex justify-content-end text-primary">
             <h1 class="pt-3 lh-base mb-5">
@@ -143,7 +220,7 @@
       <div class="row">
         <div class="d-flex align-items-center justify-content-center">
           <div class="col-lg-6 d-flex justify-content-center">
-            <img src="img/model2.png" alt="radio advertisement" class="img-fluid d-none d-lg-block"/>
+            <img src="img/model2.png" alt="radio advertisement" class="img-fluid d-none d-lg-block" />
           </div>
           <div class="col-lg-6">
             <h1 class="pt-3 lh-base mb-1 text-primary">
@@ -162,83 +239,70 @@
     </div>
   </section>
 
-<!-- Newsletter -->
-<section id="newsletter" class="py-5 bg-light background-overlay">
-  <div class="container">
-    <div class="row">
-<div class="col">
-  <img src="img/r-logo2.png" alt="logo" width="350">
-</div>
-<div class="col">
-  <div class="text-primary text-start small">
-    <h2 class="">New to Radioadspread?</h2>
-    <p class="">Subscribe to our Newsletter to get update on our latest offers!</p>
-    <div class="d-flex gap-3">
-      <input
-        type="email"
-        class="form-control form-control-md mb-3"
-        id="userEmail"
-        placeholder="Enter your e-mail"
-      />
-      <div class="d-grid">
-        <button class="btn btn-secondary text-white btn-md mb-3"  type="submit">
-        Subscribe
-        </button>
-      </div> 
+  <!-- Newsletter -->
+  <section id="newsletter" class="py-5 bg-light background-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="img/r-logo2.png" alt="logo" width="350">
+        </div>
+        <div class="col">
+          <div class="text-primary text-start small">
+            <h2 class="">New to Radioadspread?</h2>
+            <p class="">Subscribe to our Newsletter to get update on our latest offers!</p>
+            <div class="d-flex gap-3">
+              <input type="email" class="form-control form-control-md mb-3" id="userEmail"
+                placeholder="Enter your e-mail" />
+              <div class="d-grid">
+                <button class="btn btn-secondary text-white btn-md mb-3" type="submit">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Testimonials -->
-<section id="testimonial" class="py-5 bg-faint text-primary">
-  <div class="container">
-    <div class="row">
-    <div class="accordion d-md-flex justify-content-center align-items-center height" id="accordionExample">
-        
-            <div class="accordion-item col-md-6">                
-              <div class="p-3">              
-                <ul class="testimonial-list list-group">
-                  <li>
-                                    
-                     <div class="card card-testimonial p-3" type="button"
-                     data-bs-toggle="collapse"
-                     data-bs-target="#collapseOne"
-                     aria-expanded="true"
-                     aria-controls="collapseOne">
-                       <div class="d-flex flex-row align-items-center">
-                         <img src="img/person1.jpg" width="50" class="rounded-circle">
-                         <div class="d-flex flex-column ms-2 text-primary">
-                           <span class="fw-bold">Shade Benson</span>
-                           <span>Chief Marketer, CocaCola</span>
-                         </div>
-                       </div>
-                     </div>   
-                  </li>
-                  <li>      
-                    <div class="card card-testimonial p-3" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="true"
-                    aria-controls="collapseTwo">
-                      <div class="d-flex flex-row align-items-center">
-                        <img src="img/person2.jpg" width="50" class="rounded-circle">
-                        <div class="d-flex flex-column ms-2 text-primary">
-                          <span class="fw-bold">Chidima Udoeke</span>
-                          <span>CEO, CommunicationsArc</span>
-                        </div>
+  <!-- Testimonials -->
+  <section id="testimonial" class="py-5 bg-faint text-primary">
+    <div class="container">
+      <div class="row">
+        <div class="accordion d-md-flex justify-content-center align-items-center height" id="accordionExample">
+
+          <div class="accordion-item col-md-6">
+            <div class="p-3">
+              <ul class="testimonial-list list-group">
+                <li>
+
+                  <div class="card card-testimonial p-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="d-flex flex-row align-items-center">
+                      <img src="img/person1.jpg" width="50" class="rounded-circle">
+                      <div class="d-flex flex-column ms-2 text-primary">
+                        <span class="fw-bold">Shade Benson</span>
+                        <span>Chief Marketer, CocaCola</span>
                       </div>
-                    </div>   
-                 </li>
-                 <li>
-                                    
-                  <div class="card card-testimonial p-3" type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                  aria-expanded="true"
-                  aria-controls="collapseThree">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card card-testimonial p-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <div class="d-flex flex-row align-items-center">
+                      <img src="img/person2.jpg" width="50" class="rounded-circle">
+                      <div class="d-flex flex-column ms-2 text-primary">
+                        <span class="fw-bold">Chidima Udoeke</span>
+                        <span>CEO, CommunicationsArc</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+
+                  <div class="card card-testimonial p-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                     <div class="d-flex flex-row align-items-center">
                       <img src="img/person3.jpg" width="50" class="rounded-circle">
                       <div class="d-flex flex-column ms-2 text-primary">
@@ -246,94 +310,97 @@
                         <span>Ads Specialist, IBM</span>
                       </div>
                     </div>
-                  </div>   
-               </li>
-                </ul>
-                </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-           
-            
-            <div class="accordion-body col-md-6 text-primary">
-            
-             <div class="">
-                <div 
-                id="collapseOne" 
-                class="accordion-collapse collapse show"
-                 data-bs-parent="#testimonial">
-                    <div class="card-body">
-                        <h4>It was a great experience</h4>
-                        <div class="ratings">
+          </div>
 
-                         <i class="fa fa-star"></i>
-                         <i class="fa fa-star"></i>
-                         <i class="fa fa-star"></i>
-                         <i class="fa fa-star"></i>
-                           <i class="fa fa-star"></i>
-                         
-                          
-                        </div>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-                </div>
-                </div>
-                <div class="">
-                  <div 
-                  id="collapseTwo" 
-                  class="accordion-collapse collapse"
-                   data-bs-parent="#testimonial">
-                      <div class="card-body">
-                          <h4>We are happy to come accross such a useful tool</h4>
-                          <div class="ratings">
-  
-                           <i class="fa fa-star"></i>
-                           <i class="fa fa-star"></i>
-                           <i class="fa fa-star"></i>
-                           <i class="fa fa-star"></i>
-                           
-                            
-                          </div>
-  
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                      </div>
+          <div class="accordion-body col-md-6 text-primary">
+
+            <div class="">
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#testimonial">
+                <div class="card-body">
+                  <h4>It was a great experience</h4>
+                  <div class="ratings">
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+
                   </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam.</p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#testimonial">
+                <div class="card-body">
+                  <h4>We are happy to come accross such a useful tool</h4>
+                  <div class="ratings">
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+
                   </div>
-                  <div class="">
-                    <div 
-                    id="collapseThree" 
-                    class="accordion-collapse collapse"
-                     data-bs-parent="#testimonial">
-                        <div class="card-body">
-                            <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, qui?</h4>
-                            <div class="ratings">
-    
-                             <i class="fa fa-star"></i>
-                             <i class="fa fa-star"></i>
-                             <i class="fa fa-star"></i>
-                             <i class="fa fa-star"></i>
-          
-                             
-                              
-                            </div>
-    
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        </div>
-                    </div>
-                    </div>
 
-            
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam.</p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#testimonial">
+                <div class="card-body">
+                  <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, qui?</h4>
+                  <div class="ratings">
 
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+
+
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam.</p>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
         </div>
-    </div>
-</div>
-</section>
+      </div>
+  </section>
 
-<!-- Login Modal -->
-
-
-  
-
-    
 
   <!-- Footer -->
   <footer class="bd-footer py-5 bg-dark">
@@ -349,7 +416,7 @@
           <p class="mb-2"><img src="img/phone-icon.png" alt="phone icon" width="10"> (+234) 81 7710 0095</p>
           <p class="mb-2"> <img src="img/location-icon.png" alt="location icon" width="10"> 2b Montgomery Rd, Yaba,
             Lagos, Nigeria</p>
-         
+
         </div>
         <div class="col-6 col-lg-2 offset-lg-1 mb-3 pt-2">
           <h5>GO</h5>
@@ -399,16 +466,14 @@
   </footer>
 
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-  <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>

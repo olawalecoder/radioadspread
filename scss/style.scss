@@ -62,7 +62,7 @@ footer p {
   margin-bottom: 20px;
 }
 
-// Login-SignUp Modal
+// Login-html
 .card {
   .card-text {
     font-size: 0.7rem;
@@ -77,5 +77,27 @@ footer p {
     top: 25px;
     right: 30px;
     }
+}
+
+// Login Modal
+.modal {
+
+  p {
+    font-size: 0.7rem;
+  }
+
+  label {
+    margin-left: 10px;
+  }
+
+  i {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    }
+
+  .modal-header {
+    border-bottom: 0px solid #e5e5e5;
+}
 }
 
