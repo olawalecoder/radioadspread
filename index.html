@@ -45,14 +45,23 @@
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item px-3">
-            <a class="nav-link text-secondary"
-            role="button"  data-bs-toggle="modal" data-bs-target="#advertiserLoginForm">Log
-              In</a>
+          
+          <li class="nav-item px-3 dropdown">
+            <a class="nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">Login</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a class="text-dark text-decoration-none" role="button" data-bs-toggle="modal"
+                  data-bs-target="#advertiserLoginForm">Advertiser</a>
+              </li>
+              <li class="dropdown-item">
+                <a class="text-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#broadcasterLoginForm">Broadcaster</a>
+
+              </li>
+            </ul>
           </li>
           <li class="nav-item px-3">
-            <button class="btn btn-outline-secondary"><a
-                class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#broadcasterLoginForm">Sign Up</a>
+            <button class="btn btn-outline-secondary"><a class="text-white text-decoration-none" href="./signup1.html">Sign Up</a>
             </button>
           </li>
         </ul>
@@ -61,12 +70,12 @@
   </nav>
 
   <!-- Login Modal -->
-  <div class="modal fade text-center text-primary" id="advertiserLoginForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="advertiserLoginFormLabel" aria-hidden="true">
+  <div class="modal fade text-center text-primary" id="advertiserLoginForm" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1" aria-labelledby="advertiserLoginFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          
+
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -78,8 +87,7 @@
                   <p class="">Log in to your dashboard</p>
                   <form action="" class="row g-4 m-auto input-group-lg">
                     <div class="form-floating">
-                      <input type="text" required class="form-control rounded-1" id="inputEmail"
-                        placeholder="Email" />
+                      <input type="text" required class="form-control rounded-1" id="inputEmail" placeholder="Email" />
                       <label for="inputEmail">Email</label>
                     </div>
                     <div class="form-floating">
@@ -88,7 +96,7 @@
                       <label for="inputPassword">Password</label>
                       <i class="fas fa-eye-slash" id="togglePassword"></i>
                     </div>
-      
+
                     <div class="d-flex justify-content-between mt-2">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
@@ -101,11 +109,16 @@
                     <button type="submit" class="btn btn-secondary text-white rounded-1 mt-5">
                       Log in
                     </button>
-                    <p>
+                    <p class="mb-0">
+                     
+                      <a class="text-secondary text-decoration-none" role="button"
+                        data-bs-target="#broadcasterLoginForm" data-bs-toggle="modal" data-bs-dismiss="modal">Click
+                        here</a>
+                      to Sign in as Broadcaster.
+                    </>
+                    <p class="mt-2">
                       Don't have an account?
-                      <a class="text-secondary text-decoration-none" 
-                      role="button"
-                      data-bs-target="#broadcasterLoginForm" data-bs-toggle="modal" data-bs-dismiss="modal">Click here</a>
+                      <a class="text-secondary text-decoration-none" role="button" href="signup1.html">Click here</a>
                       to Sign up
                     </p>
                   </form>
@@ -117,61 +130,60 @@
       </div>
     </div>
   </div>
-  <div class="modal fade text-center text-primary" id="broadcasterLoginForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="broadcasterLoginFormLabel" aria-hidden="true">
+  <div class="modal fade text-center text-primary" id="broadcasterLoginForm" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1" aria-labelledby="broadcasterLoginFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-          <div class="modal-header">
-            
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="m-auto rounded-3">
-                  <div class="px-4">
-                    <h5 class="" id="advertiserLoginFormLabel">Welcome Back!</h5>
-                    <p class="">Log in to your dashboard</p>
-                    <form action="" class="row g-4 m-auto input-group-lg">
-                      <div class="form-floating">
-                        <input type="text" required class="form-control rounded-1" id="inputEmail"
-                          placeholder="Email" />
-                        <label for="inputEmail">Email</label>
+        <div class="modal-header">
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="m-auto rounded-3">
+                <div class="px-4">
+                  <h5 class="" id="advertiserLoginFormLabel">Welcome Back!</h5>
+                  <p class="">Log in to your dashboard</p>
+                  <form action="" class="row g-4 m-auto input-group-lg">
+                    <div class="form-floating">
+                      <input type="text" required class="form-control rounded-1" id="inputEmail" placeholder="Email" />
+                      <label for="inputEmail">Email</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" required class="form-control rounded-1" id="inputPassword"
+                        placeholder="Password" />
+                      <label for="inputPassword">Password</label>
+                      <i class="fas fa-eye-slash" id="togglePassword"></i>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                        <label class="form-check-label text-muted m-0" for="defaultCheck1">
+                          Remember Me
+                        </label>
                       </div>
-                      <div class="form-floating">
-                        <input type="password" required class="form-control rounded-1" id="inputPassword"
-                          placeholder="Password" />
-                        <label for="inputPassword">Password</label>
-                        <i class="fas fa-eye-slash" id="togglePassword"></i>
-                      </div>
-        
-                      <div class="d-flex justify-content-between mt-2">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                          <label class="form-check-label text-muted m-0" for="defaultCheck1">
-                            Remember Me
-                          </label>
-                        </div>
-                        <a href="#" class="text-secondary text-decoration-none">Forgot Password?</a>
-                      </div>
-                      <button type="submit" class="btn btn-secondary text-white rounded-1 mt-5">
-                        Log in
-                      </button>
-                      <p>
-                        Don't have an account?
-                        <a class="text-secondary text-decoration-none" 
-                        role="button"
-                        data-bs-target="#advertiserLoginForm" data-bs-toggle="modal" data-bs-dismiss="modal">Click here</a>
-                        to Sign up
-                      </p>
-                    </form>
-                  </div>
+                      <a href="#" class="text-secondary text-decoration-none">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-secondary text-white rounded-1 mt-5">
+                      Log in
+                    </button>
+                    <p class="mb-0">
+                      <a class="text-secondary text-decoration-none" role="button" data-bs-target="#advertiserLoginForm"
+                        data-bs-toggle="modal" data-bs-dismiss="modal">Click here</a>
+                      to Sign in as an Advertiser.
+                    </p>
+                    <p class="mt-2">
+                      Don't have an account?
+                      <a class="text-secondary text-decoration-none" role="button" href="signup1.html">Click here</a>
+                      to Sign up
+                    </p>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-target="#advertiserLoginForm" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
         </div>
       </div>
     </div>
@@ -515,7 +527,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
-    <script src="./index.js"></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>
