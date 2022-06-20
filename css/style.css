@@ -1,6 +1,6 @@
 body {
-  margin: 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
 
 body {
   background: #004643;
@@ -57,4 +57,4 @@ footer p {
   top: 25px;
   right: 30px; }
 .modal .modal-header {
-  border-bottom: 0px solid #e5e5e5; }
+  border-bottom: 0 solid #e5e5e5; }

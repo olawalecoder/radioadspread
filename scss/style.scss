@@ -3,8 +3,8 @@ $primary-overlay: rgba(251, 168, 34, 0.8);
 $dark-overlay: rgba(8, 8, 8, 0.9);
 
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -46,7 +46,6 @@ footer p {
 
 .card:hover {
   background-color: #eee;
-
 }
 
 .ratings i {
@@ -94,10 +93,9 @@ footer p {
     position: absolute;
     top: 25px;
     right: 30px;
-    }
+  }
 
   .modal-header {
-    border-bottom: 0px solid #e5e5e5;
+    border-bottom: 0 solid #e5e5e5;
+  }
 }
-}
-

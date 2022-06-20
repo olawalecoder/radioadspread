@@ -16,179 +16,23 @@
 
   <!-- Lottie -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+ <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script> 
+  $(function(){
+    $("#header").load("./pages/header.html"); 
+    $("#footer").load("./pages/footer.html"); 
+  });
+  </script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4 px-5">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/index.html">
-        <img src="img/r-logo.png" alt="logo" width="145" />
-      </a>
+  <div id="header"></div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav ms-auto">
-          <li class="nav-item px-3">
-            <a href="Advertisers.html" class="nav-link text-white">Advertisers</a>
-          </li>
-          <li class="nav-item px-3">
-            <a href="Broadcasters.html" class="nav-link text-white">Broadcasters</a>
-          </li>
-          <li class="nav-item px-3">
-            <a href="#knowledge" class="nav-link text-white">Knowledge Base</a>
-          </li>
-          <li class="nav-item px-3">
-            <a href="#blog" class="nav-link text-white">Blog</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto">
-          
-          <li class="nav-item px-3 dropdown">
-            <a class="nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" href="#" role="button"
-              aria-expanded="false">Login</a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item">
-                <a class="text-dark text-decoration-none" role="button" data-bs-toggle="modal"
-                  data-bs-target="#advertiserLoginForm">Advertiser</a>
-              </li>
-              <li class="dropdown-item">
-                <a class="text-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#broadcasterLoginForm">Broadcaster</a>
-
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item px-3">
-            <button class="btn btn-outline-secondary"><a class="text-white text-decoration-none" href="./signup1.html">Sign Up</a>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Login Modal -->
-  <div class="modal fade text-center text-primary" id="advertiserLoginForm" data-bs-backdrop="static"
-    data-bs-keyboard="false" tabindex="-1" aria-labelledby="advertiserLoginFormLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="m-auto rounded-3">
-                <div class="px-4">
-                  <h5 class="" id="advertiserLoginFormLabel">Welcome Back!</h5>
-                  <p class="">Log in to your dashboard</p>
-                  <form action="" class="row g-4 m-auto input-group-lg">
-                    <div class="form-floating">
-                      <input type="text" required class="form-control rounded-1" id="inputEmail" placeholder="Email" />
-                      <label for="inputEmail">Email</label>
-                    </div>
-                    <div class="form-floating">
-                      <input type="password" required class="form-control rounded-1" id="inputPassword"
-                        placeholder="Password" />
-                      <label for="inputPassword">Password</label>
-                      <i class="fas fa-eye-slash" id="togglePassword"></i>
-                    </div>
-
-                    <div class="d-flex justify-content-between mt-2">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                        <label class="form-check-label text-muted m-0" for="defaultCheck1">
-                          Remember Me
-                        </label>
-                      </div>
-                      <a href="#" class="text-secondary text-decoration-none">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn btn-secondary text-white rounded-1 mt-5">
-                      Log in
-                    </button>
-                    <p class="mb-0">
-                     
-                      <a class="text-secondary text-decoration-none" role="button"
-                        data-bs-target="#broadcasterLoginForm" data-bs-toggle="modal" data-bs-dismiss="modal">Click
-                        here</a>
-                      to Sign in as Broadcaster.
-                    </>
-                    <p class="mt-2">
-                      Don't have an account?
-                      <a class="text-secondary text-decoration-none" role="button" href="signup1.html">Click here</a>
-                      to Sign up
-                    </p>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade text-center text-primary" id="broadcasterLoginForm" data-bs-backdrop="static"
-    data-bs-keyboard="false" tabindex="-1" aria-labelledby="broadcasterLoginFormLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="m-auto rounded-3">
-                <div class="px-4">
-                  <h5 class="" id="advertiserLoginFormLabel">Welcome Back!</h5>
-                  <p class="">Log in to your dashboard</p>
-                  <form action="" class="row g-4 m-auto input-group-lg">
-                    <div class="form-floating">
-                      <input type="text" required class="form-control rounded-1" id="inputEmail" placeholder="Email" />
-                      <label for="inputEmail">Email</label>
-                    </div>
-                    <div class="form-floating">
-                      <input type="password" required class="form-control rounded-1" id="inputPassword"
-                        placeholder="Password" />
-                      <label for="inputPassword">Password</label>
-                      <i class="fas fa-eye-slash" id="togglePassword"></i>
-                    </div>
-
-                    <div class="d-flex justify-content-between mt-2">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                        <label class="form-check-label text-muted m-0" for="defaultCheck1">
-                          Remember Me
-                        </label>
-                      </div>
-                      <a href="#" class="text-secondary text-decoration-none">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn btn-secondary text-white rounded-1 mt-5">
-                      Log in
-                    </button>
-                    <p class="mb-0">
-                      <a class="text-secondary text-decoration-none" role="button" data-bs-target="#advertiserLoginForm"
-                        data-bs-toggle="modal" data-bs-dismiss="modal">Click here</a>
-                      to Sign in as an Advertiser.
-                    </p>
-                    <p class="mt-2">
-                      Don't have an account?
-                      <a class="text-secondary text-decoration-none" role="button" href="signup1.html">Click here</a>
-                      to Sign up
-                    </p>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  
   <!--Hero Section -->
   <section class="py-5" id="hero">
     <div class="container">
@@ -457,67 +301,7 @@
 
 
   <!-- Footer -->
-  <footer class="bd-footer py-5 bg-dark">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 mb-3">
-          <a class="d-inline-flex align-items-center mb-2 link-light text-decoration-none" href="/"
-            aria-label="radioadspread">
-            <img src="img/r-logo.png" alt="logo" width="145" />
-          </a>
-          <p class="mb-2 fw-light text-light">RadioAdSpread is an AI-driven global advertisement platform that
-            digitalizes the operation of radio advert globally while providing real-time report of the campaign.</p>
-          <p class="mb-2"><img src="img/phone-icon.png" alt="phone icon" width="10"> (+234) 81 7710 0095</p>
-          <p class="mb-2"> <img src="img/location-icon.png" alt="location icon" width="10"> 2b Montgomery Rd, Yaba,
-            Lagos, Nigeria</p>
-
-        </div>
-        <div class="col-6 col-lg-2 offset-lg-1 mb-3 pt-2">
-          <h5>GO</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Contact Us</a></li>
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Help Center</a></li>
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Knowledge Base</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3 pt-2">
-          <h5>COMPANY</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">About Us</a></li>
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Support</a></li>
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Terms and Conditions</a></li>
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Cookie Policy</a></li>
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Privacy</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3 pt-2">
-          <h5>SOLUTION</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Advertiser</a></li>
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Broadcaster</a></li>
-            <li class="mb-2"><a href="#" class="fw-light text-light text-decoration-none">Pricing</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3 pt-2">
-          <h5>CONNECT</h5>
-          <div>
-            <a href="" class="me-4 text-decoration-none text-reset">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-decoration-none text-reset">
-              <i class="fab fa-linkedin"></i>
-              <a href="" class="me-4 text-decoration-none text-reset">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="" class="me-4 text-decoration-none text-reset">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer"></div>
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -527,7 +311,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
-  <script src="./index.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>
