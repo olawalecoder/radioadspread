@@ -24,10 +24,12 @@ footer p {
 .card-testimonial {
   border: none;
   cursor: pointer;
-  box-shadow: 0 0 40px rgba(51, 51, 51, 0.1); }
+  box-shadow: 0 0 40px rgba(51, 51, 51, 0.2); 
+}
 
 .card:hover {
-  background-color: #eee; }
+  background-color: #00464336;
+  color: #fff; }
 
 .ratings i {
   color: orange; }
