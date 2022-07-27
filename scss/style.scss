@@ -41,11 +41,13 @@ footer p {
 .card-testimonial {
   border: none;
   cursor: pointer;
-  box-shadow: 0 0 40px rgba(51, 51, 51, .1)
+  box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+  background-color: red;
 }
 
 .card:hover {
-  background-color: #eee;
+ // background-color: $primary;
+  color: #fff;
 }
 
 .ratings i {

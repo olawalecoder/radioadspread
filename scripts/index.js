@@ -12,3 +12,13 @@ togglePassword.addEventListener("click", function () {
   this.classList.toggle('fa-eye');
   this.classList.toggle('fa-eye-slash');
 });
+
+// //Testimonial Card Toggle
+
+// const testimonial = document.getElementsByClassName(".card-testimonial")
+
+// testimonial.forEach(card => {
+//   testimonial.addEventListener("click", e => {
+//     console.log(e.target);
+//   });
+// });
